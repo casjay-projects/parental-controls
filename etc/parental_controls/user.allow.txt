@@ -1,0 +1,2 @@
+#Allow users device every day at 6:00am
+/sbin/shorewall allow ipaddress > /tmp.log && echo $(date +%D) at $(date +%H:%M) $(cat /tmp.log) >> /var/log/parental_controls.log && rm -f /tmp.log

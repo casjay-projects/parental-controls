@@ -1,0 +1,2 @@
+#Drop users device everynight at 7:30pm
+/sbin/shorewall drop ipaddress > /tmp.log && echo $(date +%D) at $(date +%H:%M) $(cat /tmp.log) >> /var/log/parental_controls.log && rm -f /tmp.log
